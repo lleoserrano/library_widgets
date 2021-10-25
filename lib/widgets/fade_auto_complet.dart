@@ -31,7 +31,6 @@ class FadeAutoComplete extends StatelessWidget {
   }) : super(key: key);
   final List<String> keys;
   final fadeController = TextEditingController();
-  final indexKey = ValueNotifier<int?>(null);
   final TextAlign textAlign;
   final TextEditingController controller;
   final InputDecoration? decoration;
