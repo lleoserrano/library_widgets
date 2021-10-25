@@ -16,6 +16,8 @@ class LibraryWidgets {
     TextStyle? textStyle,
     Duration duration = const Duration(milliseconds: 500),
     int numbersExtraSpace = 3,
+    EdgeInsetsGeometry? padding,
+    EdgeInsetsGeometry? margin,
   }) =>
       OutdoorLetters(
         value: value,
@@ -26,6 +28,8 @@ class LibraryWidgets {
         numbersExtraSpace: numbersExtraSpace,
         textStyle: textStyle,
         width: width,
+        padding: padding,
+        margin: margin,
       );
 
   static Widget autoCompletFade({

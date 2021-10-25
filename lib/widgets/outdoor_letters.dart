@@ -15,6 +15,8 @@ class OutdoorLetters extends StatefulWidget {
   final TextStyle? textStyle;
   final Duration duration;
   final int numbersExtraSpace;
+  final EdgeInsetsGeometry? padding;
+  final EdgeInsetsGeometry? margin;
 
   const OutdoorLetters({
     Key? key,
@@ -22,7 +24,9 @@ class OutdoorLetters extends StatefulWidget {
     this.width,
     this.height,
     this.decoration,
+    this.margin,
     this.textStyle,
+    this.padding,
     this.duration = const Duration(milliseconds: 500),
     this.numbersExtraSpace = 3,
   }) : super(key: key);
@@ -66,6 +70,8 @@ class _OutdoorLettersState extends State<OutdoorLetters> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: widget.padding,
+      margin: widget.margin,
       width: widget.width,
       height: widget.height,
       decoration: widget.decoration,
