@@ -44,7 +44,7 @@ $ flutter pub get
 Now in your `Dart` code, you can use:
 
 ```dart
-import 'LINK EDIT';
+import 'import 'package:library_widgets/library_widgets.dart';';
 ```
 
 # Usage
@@ -52,19 +52,51 @@ import 'LINK EDIT';
 `LibraryWidgets`:
 
 ```dart
-LibraryWidgets.outdoorLetters(
-               //EDIT Componets
-              ),
+ LibraryWidgets.outdoorLetters(
+              value: 'Dev Leonardo Serrano Flutter',
+              decoration:
+                  BoxDecoration(border: Border.all(color: Colors.white)),
+              textStyle: Theme.of(context).textTheme.bodyText1,
+            ),
+            
 ```
+![ezgif com-gif-maker-2](https://user-images.githubusercontent.com/62712813/138738162-ca9121c5-8670-4d83-a4c2-d1cded4eded8.gif)
+--------------------------------------------------------------------------------------
 
 ```dart
-//OTHER WIDGETS
-
+/// CONTAIN BUG, DON'T USE NOW ///
+LibraryWidgets.autoCompletFade(
+              keys: [
+                'teste',
+                'teste teste',
+                'Teste agua',
+                'Teste super',
+                'teste almeida',
+                'experiente',
+                'experiente fluxo',
+                'Porto',
+                'Porto pedra',
+                'Porto Pedra',
+                'Porto Pedra Pereira Agua',
+                'Preenchimento automatico de texto com fade como principal função'
+              ],
+              decoration: const InputDecoration(
+                border: OutlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+              controller: myController,
+              textStyle: Theme.of(context).textTheme.bodyText1,
+            ),
 ```
+![ezgif com-gif-maker-3](https://user-images.githubusercontent.com/62712813/138738221-e54d1434-bf35-46c2-9a93-364488f7cf53.gif)
+
 
 # Bugs or Requests
 
-If you encounter any problems feel free to open an [issue](NEEDLINK). If you feel the library is missing a feature, please raise a [ticket](NEEDLINK) on GitHub and I'll look into it. Pull request are also welcome.
+If you encounter any problems feel free to open an [issue](https://github.com/DevLSerrano/library_widgets/issues). If you feel the library is missing a feature, please raise a [ticket](https://github.com/DevLSerrano/library_widgets/pulls) on GitHub and I'll look into it. Pull request are also welcome.
 
 # Contributors
 
