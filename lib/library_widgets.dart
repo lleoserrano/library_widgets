@@ -6,6 +6,7 @@ import 'widgets/fade_auto_complet.dart';
 import 'widgets/outdoor_letters.dart';
 
 class LibraryWidgets {
+  LibraryWidgets._();
   static Widget outdoorLetters({
     Key? key,
     required String value,
