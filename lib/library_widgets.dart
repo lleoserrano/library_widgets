@@ -2,6 +2,7 @@ library library_widgets;
 
 import 'package:flutter/material.dart';
 
+import 'widgets/card_message.dart';
 import 'widgets/fade_auto_complet.dart';
 import 'widgets/outdoor_letters.dart';
 
@@ -83,5 +84,34 @@ class LibraryWidgets {
         colorBackgroundText: colorBackgroundText,
         validator: validator,
         onTap: onTap,
+      );
+
+  static Widget cardMessage({
+    Key? key,
+    CircleAvatar? circleAvatar,
+    Widget? leading,
+    Widget? body,
+    Widget? action,
+    BoxBorder? border,
+    BorderRadiusGeometry? borderRadius,
+    Color? backgroundColor,
+    PositionVerticalTriangle? positionVerticalTriangle,
+    PositionHorizontalTriangle? positionHorizontalTriangle,
+    double? maxHeight,
+    double? maxWidth,
+  }) =>
+      CardMessage(
+        key: key,
+        action: action,
+        body: body,
+        border: border,
+        circleAvatar: circleAvatar,
+        leading: leading,
+        backgroundColor: backgroundColor,
+        borderRadius: borderRadius,
+        positionHorizontalTriangle: positionHorizontalTriangle,
+        positionVerticalTriangle: positionVerticalTriangle,
+        maxHeight: maxHeight ?? double.infinity,
+        maxWidth: maxWidth ?? 300,
       );
 }
