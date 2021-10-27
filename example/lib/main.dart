@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:library_widgets/library_widgets.dart';
-import 'package:library_widgets/widgets/card_message.dart';
+import 'package:library_widgets/enums/enums.dart';
 
 void main() {
   runApp(const MyApp());
@@ -33,6 +33,55 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Demo'),
+      ),
+      floatingActionButton: Column(
+        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.end,
+        children: [
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: [
+              const SizedBox(
+                width: 16,
+              ),
+              LibraryWidgets.flowButtons(
+                iconMenu: const Icon(Icons.menu),
+                animationPosition: AnimationPosition.right,
+                menuItems: const [
+                  Icon(Icons.ac_unit),
+                  Icon(Icons.safety_divider),
+                  Icon(Icons.dangerous),
+                  Icon(Icons.safety_divider_rounded),
+                ],
+              ),
+              const Spacer(),
+              LibraryWidgets.flowButtons(
+                iconMenu: const Icon(Icons.menu),
+                menuItems: const [
+                  Icon(Icons.ac_unit),
+                  Icon(Icons.safety_divider),
+                  Icon(Icons.dangerous),
+                  Icon(Icons.safety_divider_rounded),
+                ],
+              ),
+            ],
+          ),
+          LibraryWidgets.flowButtons(
+            iconMenu: const Icon(Icons.menu),
+            animationPosition: AnimationPosition.left,
+            menuItems: [
+              IconButton(
+                  onPressed: () {}, icon: const Icon(Icons.safety_divider)),
+              IconButton(
+                  onPressed: () {}, icon: const Icon(Icons.ac_unit_sharp)),
+              IconButton(
+                  onPressed: () {}, icon: const Icon(Icons.dangerous_rounded)),
+              IconButton(
+                  onPressed: () {},
+                  icon: const Icon(Icons.g_mobiledata_outlined)),
+            ],
+          ),
+        ],
       ),
       body: Center(
         child: SingleChildScrollView(
@@ -96,37 +145,37 @@ class _MyHomePageState extends State<MyHomePage> {
                   child: FlutterLogo(),
                 ),
               ),
-              const SizedBox(
-                height: 16,
-              ),
-              LibraryWidgets.cardMessage(
-                body: const Flexible(
-                  flex: 10,
-                  child: Text(
-                    '-Hey my friend-Hey my friend i need test a big message-Hey my friend-Hey my friend-Hey my friend  my friend-Hey my friend-Hey my friend-Hey my friend\n-Hey my friend-Hey my friend-Hey my friend-Hey my friend-Hey my friend\n-Hey my friend-Hey my friend-Hey my friend-Hey my friend-Hey my friend\n',
-                  ),
-                ),
-                maxHeight: double.infinity,
-                backgroundColor: Colors.blue[900],
-                borderRadius: BorderRadius.circular(20),
-                positionHorizontalTriangle: PositionHorizontalTriangle.left,
-                circleAvatar: const CircleAvatar(
-                  maxRadius: 16,
-                  child: FlutterLogo(),
-                ),
-              ),
-              const SizedBox(
-                height: 16,
-              ),
-              LibraryWidgets.cardMessage(
-                body: const Text('Hey my friend'),
-                backgroundColor: Colors.blue[900],
-                borderRadius: BorderRadius.circular(20),
-                positionHorizontalTriangle: PositionHorizontalTriangle.right,
-              ),
-              const SizedBox(
-                height: 16,
-              ),
+              // const SizedBox(
+              //   height: 16,
+              // ),
+              // LibraryWidgets.cardMessage(
+              //   body: const Flexible(
+              //     flex: 10,
+              //     child: Text(
+              //       '-Hey my friend-Hey my friend i need test a big message-Hey my friend-Hey my friend-Hey my friend  my friend-Hey my friend-Hey my friend-Hey my friend\n-Hey my friend-Hey my friend-Hey my friend-Hey my friend-Hey my friend\n-Hey my friend-Hey my friend-Hey my friend-Hey my friend-Hey my friend\n',
+              //     ),
+              //   ),
+              //   maxHeight: double.infinity,
+              //   backgroundColor: Colors.blue[900],
+              //   borderRadius: BorderRadius.circular(20),
+              //   positionHorizontalTriangle: PositionHorizontalTriangle.left,
+              //   circleAvatar: const CircleAvatar(
+              //     maxRadius: 16,
+              //     child: FlutterLogo(),
+              //   ),
+              // ),
+              // const SizedBox(
+              //   height: 16,
+              // ),
+              // LibraryWidgets.cardMessage(
+              //   body: const Text('Hey my friend'),
+              //   backgroundColor: Colors.blue[900],
+              //   borderRadius: BorderRadius.circular(20),
+              //   positionHorizontalTriangle: PositionHorizontalTriangle.right,
+              // ),
+              // const SizedBox(
+              //   height: 16,
+              // ),
             ],
           ),
         ),

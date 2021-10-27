@@ -1,7 +1,9 @@
 library library_widgets;
 
 import 'package:flutter/material.dart';
+import 'package:library_widgets/widgets/flow_buttons.dart';
 
+import 'enums/enums.dart';
 import 'widgets/card_message.dart';
 import 'widgets/fade_auto_complet.dart';
 import 'widgets/outdoor_letters.dart';
@@ -113,5 +115,24 @@ class LibraryWidgets {
         positionVerticalTriangle: positionVerticalTriangle,
         maxHeight: maxHeight ?? double.infinity,
         maxWidth: maxWidth ?? 300,
+      );
+
+  static Widget flowButtons({
+    AnimationPosition? animationPosition,
+    Duration? duration,
+    double? heightAnimation,
+    required Widget iconMenu,
+    List<Widget>? menuItems,
+    double? sizeItens,
+    Key? key,
+  }) =>
+      FlowButtons(
+        animationPosition: animationPosition ?? AnimationPosition.top,
+        durationAnimation: duration ?? const Duration(milliseconds: 500),
+        heightAnimation: heightAnimation ?? 150,
+        iconMenu: iconMenu,
+        menuItems: menuItems ?? [],
+        sizeItens: sizeItens ?? 50,
+        key: key,
       );
 }

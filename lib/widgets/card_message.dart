@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-
-enum PositionVerticalTriangle { top, bottom }
-enum PositionHorizontalTriangle { left, right }
+import 'package:library_widgets/enums/enums.dart';
 
 class CardMessage extends StatelessWidget {
   const CardMessage({
