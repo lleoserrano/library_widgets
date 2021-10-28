@@ -3,13 +3,17 @@ library library_widgets;
 import 'package:flutter/material.dart';
 import 'package:library_widgets/widgets/flow_buttons.dart';
 
-import 'enums/enums.dart';
 import 'widgets/card_message.dart';
 import 'widgets/fade_auto_complet.dart';
 import 'widgets/outdoor_letters.dart';
 
+enum AnimationPosition { left, right, top, bottom }
+enum PositionVerticalTriangle { top, bottom }
+enum PositionHorizontalTriangle { left, right }
+
 class LibraryWidgets {
   LibraryWidgets._();
+
   static Widget outdoorLetters({
     Key? key,
     required String value,
@@ -125,6 +129,7 @@ class LibraryWidgets {
     List<Widget>? menuItems,
     double? sizeItens,
     Key? key,
+    Color? colorBackgroundIconMenu,
   }) =>
       FlowButtons(
         animationPosition: animationPosition ?? AnimationPosition.top,
@@ -134,5 +139,6 @@ class LibraryWidgets {
         menuItems: menuItems ?? [],
         sizeItens: sizeItens ?? 50,
         key: key,
+        colorBackgroundIconMenu: colorBackgroundIconMenu,
       );
 }

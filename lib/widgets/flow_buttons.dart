@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:library_widgets/enums/enums.dart';
+import 'package:library_widgets/library_widgets.dart';
 
 class FlowButtons extends StatelessWidget {
   final animation = ValueNotifier<bool>(false);
@@ -9,6 +9,7 @@ class FlowButtons extends StatelessWidget {
   final Duration durationAnimation;
   final Widget iconMenu;
   final AnimationPosition animationPosition;
+  final Color? colorBackgroundIconMenu;
 
   FlowButtons({
     Key? key,
@@ -18,6 +19,7 @@ class FlowButtons extends StatelessWidget {
     required this.durationAnimation,
     required this.iconMenu,
     required this.animationPosition,
+    this.colorBackgroundIconMenu,
   }) : super(key: key);
 
   @override
@@ -73,17 +75,15 @@ class FlowButtons extends StatelessWidget {
                   ],
                 ),
               ),
-              InkWell(
-                onTap: () {
+              FloatingActionButton(
+                backgroundColor:
+                    colorBackgroundIconMenu ?? Theme.of(context).primaryColor,
+                onPressed: () {
                   if (menuItems.isNotEmpty) {
                     animation.value = !animation.value;
                   }
                 },
-                child: SizedBox(
-                  height: sizeItens,
-                  width: sizeItens,
-                  child: iconMenu,
-                ),
+                child: iconMenu,
               ),
             ],
           );
@@ -101,17 +101,15 @@ class FlowButtons extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              InkWell(
-                onTap: () {
+              FloatingActionButton(
+                backgroundColor:
+                    colorBackgroundIconMenu ?? Theme.of(context).primaryColor,
+                onPressed: () {
                   if (menuItems.isNotEmpty) {
                     animation.value = !animation.value;
                   }
                 },
-                child: SizedBox(
-                  height: sizeItens,
-                  width: sizeItens,
-                  child: iconMenu,
-                ),
+                child: iconMenu,
               ),
               AnimatedContainer(
                 width: sizeItens,
@@ -185,17 +183,15 @@ class FlowButtons extends StatelessWidget {
                   ],
                 ),
               ),
-              InkWell(
-                onTap: () {
+              FloatingActionButton(
+                backgroundColor:
+                    colorBackgroundIconMenu ?? Theme.of(context).primaryColor,
+                onPressed: () {
                   if (menuItems.isNotEmpty) {
                     animation.value = !animation.value;
                   }
                 },
-                child: SizedBox(
-                  height: sizeItens,
-                  width: sizeItens,
-                  child: iconMenu,
-                ),
+                child: iconMenu,
               ),
             ],
           );
@@ -213,17 +209,15 @@ class FlowButtons extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              InkWell(
-                onTap: () {
+              FloatingActionButton(
+                backgroundColor:
+                    colorBackgroundIconMenu ?? Theme.of(context).primaryColor,
+                onPressed: () {
                   if (menuItems.isNotEmpty) {
                     animation.value = !animation.value;
                   }
                 },
-                child: SizedBox(
-                  height: sizeItens,
-                  width: sizeItens,
-                  child: iconMenu,
-                ),
+                child: iconMenu,
               ),
               AnimatedContainer(
                 width: value ? heightAnimation : 0,
